@@ -1,0 +1,11 @@
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\program.exe.config
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\program.exe
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\program.pdb
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\installer.exe
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\installer.pdb
+C:\msys64\home\bryan\InformationSecurity\lab01\program\bin\Debug\installer.exe.config
+C:\msys64\home\bryan\InformationSecurity\lab01\program\obj\Debug\program.csprojAssemblyReference.cache
+C:\msys64\home\bryan\InformationSecurity\lab01\program\obj\Debug\program.csproj.CoreCompileInputs.cache
+C:\msys64\home\bryan\InformationSecurity\lab01\program\obj\Debug\program.csproj.CopyComplete
+C:\msys64\home\bryan\InformationSecurity\lab01\program\obj\Debug\program.exe
+C:\msys64\home\bryan\InformationSecurity\lab01\program\obj\Debug\program.pdb

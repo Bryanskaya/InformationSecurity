@@ -1,0 +1,7 @@
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\bin\Debug\installer.exe.config
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\bin\Debug\installer.exe
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\bin\Debug\installer.pdb
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\obj\Debug\installer.csprojAssemblyReference.cache
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\obj\Debug\installer.csproj.CoreCompileInputs.cache
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\obj\Debug\installer.exe
+C:\msys64\home\bryan\InformationSecurity\lab01\installer\obj\Debug\installer.pdb
