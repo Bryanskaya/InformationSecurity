@@ -1,0 +1,5 @@
+C:\msys64\home\bryan\InformationSecurity\lab01\KeyGeneratorDLL\bin\Debug\KeyGeneratorDLL.dll
+C:\msys64\home\bryan\InformationSecurity\lab01\KeyGeneratorDLL\bin\Debug\KeyGeneratorDLL.pdb
+C:\msys64\home\bryan\InformationSecurity\lab01\KeyGeneratorDLL\obj\Debug\KeyGeneratorDLL.csproj.CoreCompileInputs.cache
+C:\msys64\home\bryan\InformationSecurity\lab01\KeyGeneratorDLL\obj\Debug\KeyGeneratorDLL.dll
+C:\msys64\home\bryan\InformationSecurity\lab01\KeyGeneratorDLL\obj\Debug\KeyGeneratorDLL.pdb

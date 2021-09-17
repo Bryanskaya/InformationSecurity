@@ -17,7 +17,7 @@ namespace lab01
 
         static bool testAuthen()
         {
-            string path = @"C:\msys64\home\bryan\InformationSecurity\lab01\key.txt";
+            string path = "key.txt";
             if (!File.Exists(path))
             {
                 Console.WriteLine("Please, run the installer first!");
@@ -26,7 +26,7 @@ namespace lab01
 
             string key = File.ReadAllText(path);
 
-            if (Installer.cmpKeys(key))
+            if (KeyGenerator.cmpKeys(key))
                 return true;
 
             return false;

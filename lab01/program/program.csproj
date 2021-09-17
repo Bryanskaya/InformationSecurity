@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\installer\installer.csproj">
-      <Project>{dd77ab3f-8c4e-4ea7-852a-41237018611c}</Project>
-      <Name>installer</Name>
+    <ProjectReference Include="..\KeyGeneratorDLL\KeyGeneratorDLL.csproj">
+      <Project>{796d64ce-41fc-4199-87ec-686b8c4386aa}</Project>
+      <Name>KeyGeneratorDLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

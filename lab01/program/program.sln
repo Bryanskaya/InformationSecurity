@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program", "program.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "installer", "..\installer\installer.csproj", "{DD77AB3F-8C4E-4EA7-852A-41237018611C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGeneratorDLL", "..\KeyGeneratorDLL\KeyGeneratorDLL.csproj", "{796D64CE-41FC-4199-87EC-686B8C4386AA}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{C161E02B-1C6B-42B4-996C-83BFCA6A4C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,12 @@ Global
 		{DD77AB3F-8C4E-4EA7-852A-41237018611C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD77AB3F-8C4E-4EA7-852A-41237018611C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD77AB3F-8C4E-4EA7-852A-41237018611C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{796D64CE-41FC-4199-87EC-686B8C4386AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796D64CE-41FC-4199-87EC-686B8C4386AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796D64CE-41FC-4199-87EC-686B8C4386AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796D64CE-41FC-4199-87EC-686B8C4386AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C161E02B-1C6B-42B4-996C-83BFCA6A4C31}.Debug|Any CPU.ActiveCfg = Debug
+		{C161E02B-1C6B-42B4-996C-83BFCA6A4C31}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
