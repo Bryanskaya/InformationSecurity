@@ -5,4 +5,4 @@
 ## Лабораторная работа 1
 ### Задание
 Реализовать программу (установщик + ПО), привязав её к конкретной машине, используя уникальные параметры компьютера.
-### ![Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab01)
+### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab01)
