@@ -16,3 +16,5 @@
 ---
 ## Лабораторная работа 3
 ### Задание
+Реализовать алгоритм DES.
+### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab03/lab03)
