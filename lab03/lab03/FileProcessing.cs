@@ -33,11 +33,8 @@ namespace lab03
         public static int[] prmP;
         public static int[][][] sBlocks;
 
-        public Cipher(string inFile, string outFile)
-        {
-            _in = inFile;
-            _out = outFile;
-            
+        public Cipher()
+        {          
             Reader.GetFromFile(_fileIP, out prmIP);
             Reader.GetFromFile(_fileIPRev, out prmIPRev);
             Reader.GetFromFile(_fileSi, out moveSi);
@@ -51,23 +48,30 @@ namespace lab03
             KeysProcessing.GetKeys(_key, out _keys_arr);
         }
 
-        public void Encrypt()
+        public void Encrypt(string inFile, string outFile)
         {
+            _in = inFile;
+            _out = outFile;
+
             Reader reader = new Reader(_in);
             Writer writer = new Writer(_out);
 
             BitArray blk;
-            int num = 0;
+            int num = 0, size, prevsize = 0;
 
-            while (reader.GetBlock(num, out blk))
+            while ((size = reader.GetBlock(num, out blk)) > 0)
             {
                 var eblk = DoEcryption(blk);
                 writer.SaveInFile(eblk);
+                prevsize = size;
+
                 num++;
             }
 
-            Reader.Close();
-            Writer.Close();
+            writer.SaveSizeInFile(prevsize);
+
+            reader.Close();
+            writer.Close();
         }
 
         private static BitArray DoEcryption(BitArray blk)
@@ -90,12 +94,53 @@ namespace lab03
             return prm_blk;
         }
 
-        public void Decipher()
+        public void Decrypt(string inFile, string outFile)
         {
+            _in = inFile;
+            _out = outFile;
 
+            Reader reader = new Reader(_in);
+            Writer writer = new Writer(_out);
+
+            BitArray blk;
+            int num = 0;
+
+            while (reader.GetBlock(num, out blk) == 8)
+            {
+                var eblk = DoDecryption(blk);
+                writer.SaveInFile(eblk);
+                num++;
+            }
+
+            int[] temp = new int[2];
+            blk.CopyTo(temp, 0);
+
+            if (temp[0] != 0)
+                writer.CutFile(8 - temp[0]);
+
+            reader.Close();
+            writer.Close();
         }
 
- 
+        public static BitArray DoDecryption(BitArray blk)
+        {
+            BitArray left, right;
+
+            BitArray prm_blk = EncryptionSteps.Permutate(blk, prmIP);
+            EncryptionSteps.GetLeftRightPart(prm_blk, out left, out right);
+
+            for (int i = _keys_arr.Length - 1; i >= 0; i--)
+            {
+                var temp_right = left;
+                left = right.Xor(EncryptionSteps.FeistelCipher(left, _keys_arr[i]));
+                right = temp_right;
+            }
+
+            prm_blk = KeysProcessing.Join(left, right);
+            prm_blk = EncryptionSteps.Permutate(prm_blk, prmIPRev);
+
+            return prm_blk;
+        }
     
     }
 }

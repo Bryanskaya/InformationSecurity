@@ -29,10 +29,6 @@ namespace lab03
 
         public static BitArray FeistelCipher(BitArray data, BitArray ikey)
         {
-            /*int[] d = new int[2] { 3, 10 };
-            BitArray del = new BitArray(d);
-            Writer.ViewArray(del);*/
-
             BitArray blk = Permutate(data, Cipher.prmE);
 
             blk.Xor(ikey);

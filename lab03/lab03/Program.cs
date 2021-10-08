@@ -10,15 +10,16 @@ namespace lab03
     {
         static void Main(string[] args)
         {
-            string fileNameScr = @"tests/tiny_test.txt";                //@"video.mp4"; @"img.jpg"; @"text.txt";
+            string fileNameScr = @"tests/text.txt";                //@"video.mp4"; @"img.jpg"; @"text.txt";
             string fileNameCipher = @"tests/ciphered_version.txt";
-            string fileNameUncipher = @"tests/uncipher_version.txt";
+            string fileNameResult = @"tests/uncipher_version.txt";
 
-            Cipher cipher = new Cipher(fileNameScr, fileNameCipher);
+            Cipher cipher = new Cipher();
             
-            cipher.Encrypt();
+            cipher.Encrypt(fileNameScr, fileNameCipher);
+            cipher.Decrypt(fileNameCipher, fileNameResult);
 
-
+            Console.WriteLine("Press any button");
             Console.ReadKey();
         }
     }

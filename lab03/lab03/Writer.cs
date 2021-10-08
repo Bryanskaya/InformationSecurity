@@ -10,7 +10,7 @@ namespace lab03
 
         public Writer(string filename)
         {
-            _fs = new FileStream(filename, FileMode.OpenOrCreate);
+            _fs = new FileStream(filename, FileMode.Create);
         }
 
         public void SaveInFile(BitArray blk)
@@ -22,7 +22,19 @@ namespace lab03
                 _fs.WriteByte(temp[i]);
         }
 
-        public static void Close()
+        public void SaveSizeInFile(int size)
+        {
+            byte add = (byte)size;
+
+            _fs.WriteByte(add);
+        }
+
+        public void CutFile(int num)
+        {
+            _fs.SetLength(_fs.Length - num);
+        }
+
+        public void Close()
         {
             _fs.Close();
         }

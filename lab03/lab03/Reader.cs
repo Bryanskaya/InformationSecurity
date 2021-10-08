@@ -16,7 +16,7 @@ namespace lab03
             }
         }
 
-        public bool GetBlock(int num_blk, out BitArray blk_bit)
+        public int GetBlock(int num_blk, out BitArray blk_bit)
         {
             byte[] blk = new byte[size_blk];
             int res, offset = num_blk * size_blk;
@@ -26,10 +26,10 @@ namespace lab03
 
             blk_bit = new BitArray(blk);
 
-            return res > 0;
+            return res;
         }
 
-        public static void Close()
+        public void Close()
         {
             _fs.Close();
         }
