@@ -39,7 +39,7 @@ namespace lab03
             _fs.Close();
         }
 
-        public static void ViewArray(BitArray arr)
+        public void ViewArray(BitArray arr)
         {
             for (int i = 0; i < arr.Count; i++)
                 Console.WriteLine($"{i}, {arr[i]}");
@@ -48,7 +48,7 @@ namespace lab03
             Console.ReadKey();
         }
 
-        public static void ViewArray(int[] arr)
+        public void ViewArray(int[] arr)
         {
             Console.WriteLine(String.Join(" ", arr));
             Console.WriteLine();
