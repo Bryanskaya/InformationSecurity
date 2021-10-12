@@ -10,7 +10,7 @@ namespace lab03
     {
         static void Main(string[] args)
         {
-            string fileNameScr = @"tests/tiny_test.txt";                //@"video.mp4"; @"img.jpg"; @"text.txt";
+            string fileNameScr = @"tests/text.txt";                //@"video.mp4"; @"img.jpg"; @"text.txt";
             string fileNameCipher = @"tests/ciphered_version.txt";
             string fileNameResult = @"tests/uncipher_version.txt";
 
