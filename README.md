@@ -20,3 +20,7 @@
 ### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab03/lab03)
 
 ---
+## Лабораторная работа 4
+### Задание
+Реализовать алгоритм RSA.
+### [Решение]()
