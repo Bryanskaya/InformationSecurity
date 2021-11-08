@@ -1,63 +1,83 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 
 namespace lab04
 {
     class RSA
     {
-        private int _startKey = 1000;
-        private int _endKey = 9999;
-        private int privateKey;
-        public int publicKey;
-        
-        static Random rnd = new Random();
+        private UInt64 _startKey = (UInt64)Math.Pow(2, 31);
+        private UInt64 _endKey = (UInt64)Math.Pow(2, 32) - 1;
+        public UInt64 privateKey = 0;
 
+        public UInt64 publicKey;
+        public UInt64 n;
 
         public RSA()
         {
-            int left = 1;
+            UInt64 p = GetSimpleKey(_startKey, _endKey);
+            UInt64 q = GetSimpleKey(_startKey, _endKey);
+            n = p * q;
+            UInt64 fi = MathFuncs.fi(p, q);
 
-            int p = GetSimpleKey(_startKey, _endKey);
-            int q = GetSimpleKey(_startKey, _endKey);
-            int n = p * q;
+            while (privateKey == 0)
+            {
+                publicKey = GetPublicKey(fi);
+                privateKey = GetPrivateKey(publicKey, fi);
+            }
 
-            publicKey = GetPublicKey(left, MathFuncs.fi(p, q));
-            privateKey = GetPrivateKey();
+            Console.WriteLine("n = {0}  privateKey = {1}  publicKey = {2}", n, privateKey, publicKey);
         }
 
-        static int GetSimpleKey(int start, int end)
+        static UInt64 GetSimpleKey(UInt64 start, UInt64 end)
         {
-            int num;
+            UInt64 num;
 
             do
             {
-                num = rnd.Next(start, end);
+                num = MathFuncs.GenerateUInt64(start, end);
             } while (!MathFuncs.IsSimple(num));
 
             return num;
         }
 
-        static int GetPublicKey(int fi, int left = 1)
+        static UInt64 GetPublicKey(UInt64 fi, UInt64 left = 1)
         {
-            int e, res;
+            UInt64 e, res;
 
             do
             {
-                e = rnd.Next(left + 1, fi);
+                e = MathFuncs.GenerateUInt64(left + 1, fi);
                 res = MathFuncs.GCD(e, fi);
             } while (res != 1);
 
             return e;            
         }
 
-        static int GetPrivateKey()
+        static UInt64 GetPrivateKey(UInt64 a, UInt64 b)
         {
-            int res;
+            BigInteger res;
 
-            return res;
+            (_, res, _) = _getPrivateKey(a, b);
+
+            if (res < 0)
+                return 0;
+
+            return (UInt64)res;
+        }
+
+        static (BigInteger, BigInteger, BigInteger) _getPrivateKey(BigInteger a, BigInteger b)
+        {
+            BigInteger s, s1, t, t1, gcd;
+
+            if (b.IsZero)
+                return (a, 1, 0);
+
+            (gcd, s1, t1) = _getPrivateKey(b, a % b);
+
+            s = t1;
+            t = s1 - (a / b) * t1;
+
+            return (gcd, s, t);
         }
     }
 }
