@@ -65,6 +65,8 @@ namespace lab04
             return (UInt64)res;
         }
 
+        // ax + by = нод(a, b)
+
         static (BigInteger, BigInteger, BigInteger) _getPrivateKey(BigInteger a, BigInteger b)
         {
             BigInteger s, s1, t, t1, gcd;

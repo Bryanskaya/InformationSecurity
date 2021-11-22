@@ -6,9 +6,9 @@ namespace lab04
     {
         static void Main(string[] args)
         {
-            string fileNameScr = @"tests/img.jpg";                //@"test_video.gif"; @"img.jpg"; @"text.txt";
-            string fileNameCipher = @"tests/ciphered_version.mp4";
-            string fileNameResult = @"tests/uncipher_version.jpg";
+            string fileNameScr = @"tests/test_video.gif";                //@"test_video.gif"; @"img.jpg"; @"text.txt";
+            string fileNameCipher = @"tests/ciphered_version.gif";
+            string fileNameResult = @"tests/uncipher_version.gif";
 
             Cipher cipher = new Cipher();
 
