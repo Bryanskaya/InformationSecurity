@@ -1,0 +1,17 @@
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\lab06.exe.config
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\lab06.exe
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\lab06.pdb
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.csprojAssemblyReference.cache
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.csproj.CoreCompileInputs.cache
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.exe
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.pdb
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Memory.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Text.Json.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Numerics.Vectors.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Text.Encodings.Web.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.exe.config
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\obj\Debug\lab06.csproj.CopyComplete
+C:\msys64\home\bryan\InformationSecurity\lab06\lab06\bin\Debug\System.Buffers.dll
