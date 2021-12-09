@@ -23,4 +23,16 @@
 ## Лабораторная работа 4
 ### Задание
 Реализовать алгоритм RSA.
-### [Решение]()
+### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab04)
+
+---
+## Лабораторная работа 5
+### Задание
+Создать электронную подпись.
+### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab05)
+
+---
+## Лабораторная работа 6
+### Задание
+Реализовать алгоритм Хаффмана.
+### [Решение](https://github.com/Bryanskaya/InformationSecurity/tree/main/lab06)
