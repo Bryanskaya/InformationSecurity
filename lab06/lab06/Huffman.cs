@@ -76,7 +76,8 @@ namespace fileCompression
                 string result = code;
 
                 codeArr.Add(node.sign, result);
-                code = code.Remove(code.Length - 1);
+                if (code.Length != 0)
+                    code = code.Remove(code.Length - 1);
             }
             else
             {
